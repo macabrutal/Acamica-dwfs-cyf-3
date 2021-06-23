@@ -13,77 +13,8 @@ body {
   height: 100%;
 }
 
-/*MENU ESCRITORIO, SE VERÁ DE 400px PARA ARRIBA*/
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  margin: 0 100px;
-
-}
-
-.logo img {
-  width: 36px;
-  height: 36px;
-}
-
-nav .desktop-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  display: inline;
-}
-
-.desktop-menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  height: 28px;
-}
-
-.desktop-menu li {
-  display: inline;
-  letter-spacing: 0;
-  line-height: 28px;
-  padding-left: 40px;
-  list-style-type: none;
-  text-decoration: none;
-}
-
-.desktop-menu li a {
-  font-family: "IBM Plex Mono", monospace;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 28px;
-  text-align: center;
-  text-decoration: none;
-  color: #060a24;
-  cursor: pointer;
-}
-
-.desktop-menu li a:link {
-  text-align: center;
-  text-decoration: none;
-  color: #060a24;
-  cursor: pointer;
-}
-
-.desktop-menu li a:hover {
-  color: #00f3bb;
-  line-height: 28px;
-  text-decoration: line-through;
-}
-
-.desktop-menu li a:active {
-  color: #060a24;
-  opacity: 0.5;
-  text-decoration: line-through;
-}
-
+/* -- ESCRITORIO CONTENIDO --*/
 /*CONTENIDO*/
-
 .content {
   display: flex;
   height: 280px;
@@ -97,8 +28,7 @@ nav .desktop-menu {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 64px;
   font-weight: 400;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
+  /*margin-block-end: 0.67em;*/
 }
 
 .text-line {
@@ -114,6 +44,7 @@ nav .desktop-menu {
   font-size: 16px;
   color: #060a24;
   line-height: 22px;
+  width: 628px;
 }
 
 button.bot-conoce {
@@ -389,6 +320,15 @@ footer {
   font-size: 18px;
   color: #060a24;
   margin-right: 36px;
+  transition: all 1s ease;
+  /*ANIMACIÓN*/
+  cursor: pointer;
+}
+
+.rrss-items:hover {
+  transform: translateY(-10px)
+    /*ANIMACIÓN*/
+
 }
 
 .rrss-items:nth-child(5) {
@@ -407,25 +347,40 @@ div a:hover {
   color: #00f3bb;
 }
 
-div a:hover:nth-child(5) {
-  background-color: maroon;
-}
 
 
-/* ******************************* */
-/* MENU M 2 */
+
+
+/* -- MENU MOBILE -- */
 /* header */
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 44px;
+  margin: 0;
+  padding: 0 10px;
+  overflow: visible;
+  position: relative;
+}
+
+.header .logo {
+  width: 24px;
+  height: 24px;
+  display: block;
+  /*float: left;*/
+  padding: 10px;
+
+}
 
 .header ul {
   width: 100%;
   left: 0;
   right: 0;
-  top: 60px;
+  top: 44px;
   overflow: hidden;
   position: absolute;
 }
-
 
 .header li {
   height: 56px;
@@ -436,7 +391,6 @@ div a:hover:nth-child(5) {
   background-color: #0000ec;
   cursor: pointer;
 }
-
 
 .header li a {
   display: block;
@@ -451,17 +405,8 @@ div a:hover:nth-child(5) {
   cursor: pointer;
 }
 
-
 .header li a:hover {
   color: #00F3BB;
-}
-
-.header .logo {
-  display: block;
-  float: left;
-  font-size: 2em;
-  padding: 10px 20px;
-  text-decoration: none;
 }
 
 /* menu */
@@ -477,7 +422,7 @@ div a:hover:nth-child(5) {
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
-  padding: 28px 20px;
+  padding: 22px 10px;
   position: relative;
   user-select: none;
 }
@@ -537,18 +482,44 @@ div a:hover:nth-child(5) {
   top: 0;
 }
 
-/* MENU M 2 */
+/* MENU  */
 /* ******************************* */
 
 
-/* MOBILE */
+/* -- MENÚ ESCRITORIO -- */
 @media screen and (min-width: 501px) {
 
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin: 0 100px 100px;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    width: 43%;
+  }
+
+  .logo img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+
   .header ul {
+    display: flex;
+    height: 28px;
     top: 0;
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style-type: none;
     position: relative;
     box-shadow: none;
     justify-content: space-between;
@@ -556,15 +527,15 @@ div a:hover:nth-child(5) {
   }
 
   .header li {
-    float: right;
     display: inline;
     letter-spacing: 0;
     line-height: 28px;
-    padding-left: 48px;
+    padding-left: 40px;
     list-style-type: none;
     text-decoration: none;
     background-color: #fff;
   }
+
 
   .header li a {
     padding-top: 20px;
@@ -577,7 +548,6 @@ div a:hover:nth-child(5) {
     text-decoration: none;
     color: #060a24;
     cursor: pointer;
-
   }
 
   .header li a:hover {
@@ -586,25 +556,10 @@ div a:hover:nth-child(5) {
     text-decoration: line-through;
   }
 
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-
-  .header .menu-icon {
-    display: none;
-  }
 }
 
-
+/* -- MOBILE CONTENIDO -- */
 @media screen and (max-width: 500px) {
-
-  header {
-    margin: 0 16px;
-    overflow: visible;
-    position: relative;
-  }
 
   .content {
     margin: 29px 16px 0;
@@ -632,6 +587,7 @@ div a:hover:nth-child(5) {
   }
 
   .content p {
+    width: 100%;
     font-size: 14px;
     line-height: 22px;
   }
