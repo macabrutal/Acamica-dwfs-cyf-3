@@ -187,6 +187,7 @@ div .phone {
 #entrevistas div img {
   width: 480px;
   height: 364px;
+  display:block;
 }
 
 /*topicos*/
