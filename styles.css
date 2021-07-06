@@ -339,7 +339,6 @@ footer {
 .rrss-items:hover {
   transform: translateY(-10px)
     /*ANIMACIÓN*/
-
 }
 
 .rrss-items:nth-child(5) {
@@ -353,12 +352,9 @@ div a {
   text-decoration: none;
 }
 
-
 div a:hover {
   color: #00f3bb;
 }
-
-
 
 
 
@@ -751,14 +747,12 @@ div a:hover {
     margin-right: 36px;
   }
 
-
   .inf {
     width: 100%;
     font-size: 14px;
     margin-bottom: 16px;
   }
 }
-
 
 
 
@@ -769,7 +763,6 @@ div a:hover {
     height: 80px;
     margin: 0 16px 50px;
   }
-
 
   .content {
     padding: 0 10px;
@@ -793,7 +786,6 @@ div a:hover {
     margin-bottom: 11px;
   }
 
-
   .pod:first-child {
     padding-right: 11px;
   }
@@ -809,11 +801,6 @@ div a:hover {
   #topicos {
 
     margin: 64px 16px 34px;
-  }
-
-  .items-icons {
-    width: 50%;
-    justify-content: space-between;
   }
 
   #footer {
